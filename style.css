@@ -1,0 +1,70 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    background: #020b26;
+    background: radial-gradient(#312d3c 8%, transparent 8%), #17141d;
+    background-position: 0 0, 26px 26px;
+    background-size: 26px 26px;
+}
+
+section.works {
+    margin-top: 45vh;
+}
+
+section.works .work-item {
+    position: relative;
+    width: fit-content;
+    margin: 20px 0;
+}
+
+section.works .work-item .work-title {
+    padding-bottom: 50px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+section.works .work-item img {
+    width: 60vw;
+    position: absolute;
+    bottom: 0%;
+    left: -30%;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 300ms ease-out;
+    pointer-events: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+section.works .work-item:hover,
+section.works .work-item:focus {
+    z-index: 99;
+}
+
+
+section.works .work-item:hover .work-title,
+section.works .work-item:focus .work-title {
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+section.works .work-item:hover img {
+    visibility: visible;
+    opacity: 1;
+}
+
+section.works .work-item:hover .work-title {
+    z-index: 1000;
+}
+
+img {
+    max-width: 500px;
+    max-height: 200px;
+}
